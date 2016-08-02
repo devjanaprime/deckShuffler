@@ -21,6 +21,20 @@ var setupDeck = function(){
     } // end faces loop
   } // end suits loop
   console.log( deck );
-}
+} // end funk
+
+var showDeck = function(){
+  // unordered list for the cards
+  var outputList = document.createElement( 'ul' );
+  // for each card add a list item
+  for( var i=0; i < deck.length; i++ ){
+    var listItem = document.createElement( 'li' );
+    var textnode = document.createTextNode( deck[ i ].face + " of " + deck[ i ].suit );
+    listItem.appendChild( textnode );
+    outputList.appendChild( listItem );
+  }
+  document.getElementById( 'outputDiv' ).appendChild( outputList );
+} // end funk
+
 //run the setupDeck Function
 setupDeck();

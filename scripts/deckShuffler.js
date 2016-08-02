@@ -9,6 +9,31 @@ var faces = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen'
 
 var cutDeck = function(){
   console.log( 'in cutDeck' );
+  // cutIndex needs to be between 0 and deck.length
+  // we are using Math.random returns a float between 0.0 and 1.0
+  // multiply that by deck length and we'll get a float between 0 and deck.length
+  var cutIndex = Math.random() * deck.length;
+  // now we want an integer to use as an index
+  // Math.floor will round down to the nearest integer
+  var cutIndex =  Math.floor( cutIndex );
+  console.log( cutIndex );
+  // cards above and including cutIndex in deck are the "top" of the cut
+  var topCut = [];
+  for( var i=cutIndex; i<deck.length; i++ ){
+    topCut.push( deck[ i ] );
+  }// end top cut loop
+
+  // cards below cutIndex are the 'bottom"
+  var bottomCut = [];
+  for( var i=0; i<cutIndex; i++ ){
+    bottomCut.push( deck[ i ] );
+  }// end top cut loop
+
+  // put top cut in the bottom of the deck
+  deck = topCut;
+  // push in bottomCut to the top
+  deck.push.apply( deck, bottomCut );
+  showDeck();
 } // end funk
 
 var setupDeck = function(){
@@ -28,6 +53,8 @@ var setupDeck = function(){
 } // end funk
 
 var showDeck = function(){
+  // clear div
+  document.getElementById( 'outputDiv' ).innerHTML = "";
   // unordered list for the cards
   var outputList = document.createElement( 'ul' );
   // for each card add a list item

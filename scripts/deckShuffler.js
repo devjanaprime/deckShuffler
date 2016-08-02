@@ -21,6 +21,7 @@ var setupDeck = function(){
     } // end faces loop
   } // end suits loop
   console.log( deck );
+  showDeck();
 } // end funk
 
 var showDeck = function(){
@@ -35,6 +36,3 @@ var showDeck = function(){
   }
   document.getElementById( 'outputDiv' ).appendChild( outputList );
 } // end funk
-
-//run the setupDeck Function
-setupDeck();

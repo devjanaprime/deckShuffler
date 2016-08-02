@@ -1,7 +1,7 @@
 Vanilla JS Deck Shuffler
 ========================
 
-Just an exercise to keep some of my vanilla JavaScript and lecturing skills in order before a new cohort starts.
+Just an exercise to keep some of my vanilla JavaScript and lecturing skills before a new cohort starts.
 
 Functions, Objects, Arrays.
 

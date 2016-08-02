@@ -10,4 +10,3 @@ Features by branch:
 * 0.2 - basic deck on DOM
 * 0.3 - cut deck
 * 0.4 - shuffle deck
-* 0.5 - random card

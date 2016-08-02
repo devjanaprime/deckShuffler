@@ -22,5 +22,3 @@ var setupDeck = function(){
   } // end suits loop
   console.log( deck );
 }
-//run the setupDeck Function
-setupDeck();

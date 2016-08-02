@@ -7,6 +7,10 @@ var suits = [ 'Clubs', 'Diamonds', 'Hearts', 'Spades' ];
 // the possible faces
 var faces = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King' ];
 
+var cutDeck = function(){
+  console.log( 'in cutDeck' );
+} // end funk
+
 var setupDeck = function(){
   // use suits and faces to create the deck
   for( var i=0; i < suits.length; i++){
@@ -34,6 +38,10 @@ var showDeck = function(){
     outputList.appendChild( listItem );
   }
   document.getElementById( 'outputDiv' ).appendChild( outputList );
+} // end funk
+
+var shuffleDeck = function(){
+  console.log( 'in shuffleDeck' );
 } // end funk
 
 //run the setupDeck Function
